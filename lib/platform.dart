@@ -54,7 +54,7 @@ class PlatformBundle {
         await windowManager.setAlwaysOnTop(alwaysOnTop);
         await windowManager.setSkipTaskbar(skipTaskbar);
         if (initRest != null) {
-          initRest();
+          await initRest();
         }
         await windowManager.show();
       });
@@ -65,9 +65,7 @@ class PlatformBundle {
       }
       if (systemTrayMenu != null) {
         await trayManager.setContextMenu(
-          Menu(
-            items: systemTrayMenu,
-          ),
+          systemTrayMenu,
         );
       }
     };

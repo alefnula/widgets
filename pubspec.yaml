@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^1.0.3
-  tray_manager: ^0.1.5
+  tray_manager: 0.1.4
   window_manager: ^0.2.3
 
 dev_dependencies:

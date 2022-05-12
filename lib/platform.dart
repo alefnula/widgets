@@ -1,8 +1,7 @@
 library widgets;
 
 import 'dart:io' as io;
-
-import 'package:flutter/widgets.dart';
+import 'package:flutter/widgets.dart' hide MenuItem;
 import 'package:tray_manager/tray_manager.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -64,9 +63,7 @@ class PlatformBundle {
         await trayManager.setIcon(systemTrayIcon);
       }
       if (systemTrayMenu != null) {
-        await trayManager.setContextMenu(
-          systemTrayMenu,
-        );
+        await trayManager.setContextMenu(Menu(items: systemTrayMenu));
       }
     };
   }
